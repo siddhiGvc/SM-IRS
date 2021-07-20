@@ -24,10 +24,21 @@
 			</v-row>
 		</v-col>
 
+		
+
 		<v-col class="hidden-xs-only" sm="4" md="4" lg="3" xl="3">
-			<macro-list></macro-list>
+			
+				<power-status class="mb-3"> </power-status>
+			
+		
+			<macro-list class="mb-3"></macro-list>
+			
 		</v-col>
+				
 	</v-row>
+
+	
+	
 </template>
 
 <script>

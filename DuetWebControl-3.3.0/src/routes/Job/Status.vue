@@ -17,6 +17,10 @@
 					<v-col cols="12">
 						<z-babystep-panel></z-babystep-panel>
 					</v-col>
+					<v-col cols="12">
+						<zaxisbrake-panel class="mb-2"></zaxisbrake-panel>
+					</v-col>
+
 					<v-col class="hidden-sm-and-down">
 						<job-info-panel></job-info-panel>
 					</v-col>

@@ -12,6 +12,9 @@ import JobControlPanel from './JobControlPanel.vue'
 import JobDataPanel from './JobDataPanel.vue'
 import JobEstimationsPanel from './JobEstimationsPanel.vue'
 import JobInfoPanel from './JobInfoPanel.vue'
+import LaserControlPanel from './LaserControlPanel.vue'
+import LaserDashboard from './LaserDashboard.vue'
+import PowerPanel from './PowerStatusPanel.vue'
 import SettingsAboutPanel from './SettingsAboutPanel.vue'
 import SettingsAppearancePanel from './SettingsAppearancePanel.vue'
 import SettingsCommunicationPanel from './SettingsCommunicationPanel.vue'
@@ -24,7 +27,9 @@ import SettingsWebcamPanel from './SettingsWebcamPanel.vue'
 import SpeedFactorPanel from './SpeedFactorPanel.vue'
 import StatusPanel from './StatusPanel.vue'
 import ToolsPanel from './ToolsPanel.vue'
+import TicklePulse from './TicklePulsePanel.vue'
 import WebcamPanel from './WebcamPanel.vue'
+import ZAxisBrake from './ZAxisBrake.vue'
 import ZBabystepPanel from './ZBabystepPanel.vue'
 
 Vue.component('atx-panel', ATXPanel)
@@ -36,7 +41,10 @@ Vue.component('job-control-panel', JobControlPanel)
 Vue.component('job-data-panel', JobDataPanel)
 Vue.component('job-estimations-panel', JobEstimationsPanel)
 Vue.component('job-info-panel', JobInfoPanel)
+Vue.component('laser-control-panel', LaserControlPanel)
+Vue.component('laser-dashboard', LaserDashboard)
 Vue.component('movement-panel', MovementPanel)
+Vue.component('power-status', PowerPanel)
 Vue.component('settings-about-panel', SettingsAboutPanel)
 Vue.component('settings-apperance-panel', SettingsAppearancePanel)
 Vue.component('settings-communication-panel', SettingsCommunicationPanel)
@@ -48,7 +56,9 @@ Vue.component('settings-notifications-panel', SettingsNotificationsPanel)
 Vue.component('settings-webcam-panel', SettingsWebcamPanel)
 Vue.component('status-panel', StatusPanel)
 Vue.component('speed-factor-panel', SpeedFactorPanel)
+Vue.component('tickle-panel', TicklePulse)
 Vue.component('tools-panel', ToolsPanel)
 Vue.component('webcam-panel', WebcamPanel)
+Vue.component('zaxisbrake-panel', ZAxisBrake)
 Vue.component('z-babystep-panel', ZBabystepPanel)
 

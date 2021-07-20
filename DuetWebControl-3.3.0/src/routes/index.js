@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 
 import Dashboard from './Control/Dashboard.vue'
 import Console from './Control/Console.vue'
+import Laser from './Control/Laser.vue'
 
 import Filaments from './Files/Filaments.vue'
 import Jobs from './Files/Jobs.vue'
@@ -180,6 +181,7 @@ export function registerSettingTab(general, name, component, caption, translated
 // Control
 Vue.use(Dashboard)
 Vue.use(Console)
+Vue.use(Laser)
 
 // Files
 Vue.use(Filaments)

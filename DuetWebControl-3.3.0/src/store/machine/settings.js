@@ -38,6 +38,7 @@ export default function(connector, pluginSettingFields) {
 			moveFeedrate: 6000,							// mm/min
 			extruderAmounts: [100, 50, 20, 10, 5, 1],	// mm
 			extruderFeedrates: [60, 30, 15, 5, 1],		// mm/s
+			laserPower:[0.5, 1, 5, 8, 20],
 			temperatures: {
 				tool: {
 					active: [250, 235, 220, 205, 195, 160, 120, 100, 0],

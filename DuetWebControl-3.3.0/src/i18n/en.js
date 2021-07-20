@@ -461,7 +461,8 @@ export default {
 		control: {
 			caption: 'Control',
 			dashboard: 'Dashboard',
-			console: 'Console'
+			console: 'Console',
+			laser: 'Laser'
 		},
 		job: {
 			caption: 'Job',
@@ -560,6 +561,14 @@ export default {
 			on: 'On',
 			off: 'Off'
 		},
+
+		zbrake: {
+			caption: 'Z Axis Brake',
+			release: 'Unlock',
+			lock: 'Lock'
+		},
+
+
 		babystepping: {
 			caption: 'Z Babystepping',
 			current: 'Current Offset: {0}'
@@ -592,6 +601,7 @@ export default {
 			fan: 'Fan {0}',
 			noFans: 'No Fans'
 		},
+
 		jobControl: {
 			caption: 'Job Control',
 			cancelJob: 'Cancel Job',
@@ -644,6 +654,37 @@ export default {
 			axesNotHomed: 'The following axis is not homed:|The following axes are not homed:',
 			noAxes: 'No Axes'
 		},
+
+		
+		laserControles: {
+			caption: 'Laser Module',
+			caption1: 'Control',
+			laserOn: 'ON',
+			laserEnable: 'Enable',
+			laserDisable: 'Disable',
+			laserOff: 'OFF'
+		},
+		laserStatus: {
+			caption: 'Laser Status',
+			power: 'Laser Power Supply :',
+			voltageFault: 'Voltage Fault:',
+			temperatureFault: 'Temperature Fault:',
+			laserState: 'Laser State :',
+			parameter: 'Parameters',
+			state: 'Status',
+		},
+		ticklePulse: {
+			caption: 'Tickle Pulse',
+			on: 'ON',
+			off: 'OFF'
+		},
+
+		powersupply: {
+			caption: 'System Power Supply',
+			name: 'Name',
+			status: 'Status',
+		},
+
 		settingsAbout: {
 			caption: 'About',
 			developedBy: 'Web Interface developed by',
