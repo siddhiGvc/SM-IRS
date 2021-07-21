@@ -14,6 +14,7 @@ import JobEstimationsPanel from './JobEstimationsPanel.vue'
 import JobInfoPanel from './JobInfoPanel.vue'
 import LaserControlPanel from './LaserControlPanel.vue'
 import LaserDashboard from './LaserDashboard.vue'
+import LaserEDPanel from './LaserEDPanel.vue'
 import PowerPanel from './PowerStatusPanel.vue'
 import SettingsAboutPanel from './SettingsAboutPanel.vue'
 import SettingsAppearancePanel from './SettingsAppearancePanel.vue'
@@ -43,6 +44,7 @@ Vue.component('job-estimations-panel', JobEstimationsPanel)
 Vue.component('job-info-panel', JobInfoPanel)
 Vue.component('laser-control-panel', LaserControlPanel)
 Vue.component('laser-dashboard', LaserDashboard)
+Vue.component('laser-ed-panel',LaserEDPanel)
 Vue.component('movement-panel', MovementPanel)
 Vue.component('power-status', PowerPanel)
 Vue.component('settings-about-panel', SettingsAboutPanel)

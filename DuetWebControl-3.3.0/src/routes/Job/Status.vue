@@ -46,9 +46,11 @@
 				</v-row>
 
 				<v-row class="flex-grow-0 flex-shrink-1 hidden-sm-and-up mt-3">
+					<!--
 					<v-col cols="6" md="6">
 						<fans-panel></fans-panel>
 					</v-col>
+					-->
 					<v-col cols="6" md="6">
 						<speed-factor-panel></speed-factor-panel>
 					</v-col>

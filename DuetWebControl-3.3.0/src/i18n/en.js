@@ -678,9 +678,17 @@ export default {
 			on: 'ON',
 			off: 'OFF'
 		},
+	
+
 
 		powersupply: {
 			caption: 'System Power Supply',
+			name: 'Name',
+			status: 'Status',
+		},
+
+		lasered: {
+			caption: 'Laser System',
 			name: 'Name',
 			status: 'Status',
 		},

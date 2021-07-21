@@ -45,69 +45,38 @@
         <v-card-text class="px-0 pt-0 pb-2 content text-xs-center" v-show="visibleInputs || (visibleInputs.length + move.extruders.length)">
             <!--<v-card-title  class="pb-1">-->
             <v-card-title>
-                <v-icon small class="mr-1">mdi-information </v-icon> {{ $t('panel.powersupply.caption') }}
+                <v-icon small class="mr-1">mdi-information </v-icon> {{ $t('panel.lasered.caption') }}
             </v-card-title>
             <!-- Sensors -->
             <v-col align-content="left" no-gutters class="flex-nowrap">
                 <v-divider class="my-2"></v-divider>
                 <v-simple-table v-show="gpIn.length" dense>
                     <template v-slot:default>
-                        <thead>
+                        <!--<thead>
                             <tr>
-                                <th class="text-left">{{ $t('panel.powersupply.name') }}</th>
-                                <th class="text-left">{{ $t('panel.powersupply.status') }}</th>
-                                <th class="text-center">{{ $t('Control') }}</th>
+                                <th class="text-left">{{ $t('panel.lasered.name') }}</th>
+                                <th class="text-center">{{ $t('State') }}</th>
                             </tr>
                         </thead>
-
-                        <!-- PS_0-->
+-->
+                        
                         <tbody>
+                            <!-- PS_0-->
                             <tr>
                                 <td class="text-left"> {{powerStatus[0]}} </td>
-                                <td class="text-left"> {{ gpIn[0] ? (gpIn[0].value ? $t('OFF') : $t('ON')) : $t('generic.noValue') }} </td>
+                            <!--    <td class="text-left"> {{ gpIn[0] ? (gpIn[0].value ? $t('OFF') : $t('ON')) : $t('generic.noValue') }} </td> -->
                                 <td>
-                                    <v-btn-toggle :value="true" @change="togglePower" mandatory>
-                                        <v-btn text :value="true" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(true, 1)">
-                                            {{ $t('ON') }}
-                                        </v-btn>
-                                        <v-btn text :value="false" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(false, 1)">
-                                            {{ $t('OFF') }}
-                                        </v-btn>
-                                    </v-btn-toggle>
-                                </td>
-                            </tr>
-                            <!-- PS_0-->
-                            <tr>
-                                <td class="text-left"> {{powerStatus[1]}} </td>
-                                <td class="text-left"> {{ gpIn[1] ? (gpIn[1].value ? $t('OFF') : $t('ON')) : $t('generic.noValue') }} </td>
-                                <td>
-                                    <!--gpIn[1].value-->
-                                    <v-btn-toggle color="primary" :value="false" @change="togglePower" mandatory>
-                                        <v-btn text :value="true" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(true, 2)">
-                                            {{ $t('ON') }}
-                                        </v-btn>
-                                        <v-btn text :value="false" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(false, 2)">
-                                            {{ $t('OFF') }}
-                                        </v-btn>
-                                    </v-btn-toggle>
-                                </td>
-                            </tr>
-                            <!-- PS_0-->
-                            <tr>
-                                <td class="text-left"> {{ powerStatus[2] }} </td>
-                                <td class="text-left"> {{ gpIn[2] ? (gpIn[2].value ? $t('ON') : $t('OFF')) : $t('generic.noValue') }} </td>
-                                <td>
-                                    <!--gpIn[2].value-->
                                     <v-btn-toggle :value="false" @change="togglePower" mandatory>
-                                        <v-btn text :value="true" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(true, 3)">
-                                            {{ $t('ON') }}
+                                        <v-btn text :value="true" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(true)">
+                                            {{ $t('ENABLE') }}
                                         </v-btn>
-                                        <v-btn text :value="false" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(false, 3)">
-                                            {{ $t('OFF') }}
+                                        <v-btn text :value="false" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(false)">
+                                            {{ $t('DISABLE') }}
                                         </v-btn>
                                     </v-btn-toggle>
                                 </td>
                             </tr>
+                           
                         </tbody>
                     </template>
                 </v-simple-table>
@@ -155,7 +124,7 @@
         data() {
             return {
                 displayToolPosition: true,
-                powerStatus: ["Main", "RTFS", "Laser"],
+                powerStatus: ["State"],
                 sendingCode: false,
             }
 
@@ -174,14 +143,11 @@
                 }
                 return values;
             },
-            async togglePower(state, index) {
+            async togglePower(state) {
                 if (!this.sendingCode) {
                     this.sendingCode = true;
                     try {
-                        console.log(this.state.gpOut[4].pwm);
-                        console.log(this.state.gpOut[5].pwm);
-                        console.log(this.state.gpOut[6].pwm);
-                        await this.sendCode(state ? 'M42 P' + (3 + index) + ' S0' : 'M42 P' + (3 + index) + ' S1');
+                        await this.sendCode(state ? 'O48'  : 'O49 ' );
                     } catch (e) {
                         // handled before we get here
                     }

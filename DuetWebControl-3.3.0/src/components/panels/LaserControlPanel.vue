@@ -20,7 +20,7 @@
             </v-card-title>
                 <v-col>
                     <v-col>
-                        <v-checkbox v-model="laserEnable" label="Laser Enable Module" color="primary" hide-details @click="check(state)" class="shrink mr-2 mt-0"> </v-checkbox>
+                        <v-checkbox v-model="laserEnable" label="Laser Enable Module" color="primary" hide-details @click="check(laserEnable)" class="shrink mr-2 mt-0"> </v-checkbox>
                         <v-text-field v-model="laserPower" :disabled="!laserEnable" :rules='newRules' label="Enter Power" suffix="W"> </v-text-field>
                     </v-col>
                     <v-col>
@@ -64,12 +64,12 @@
         },
         methods: {
             ...mapActions('machine', ['sendCode']),
-            check: async function (state) {
+            check: async function (laserEnable) {
                 if (!this.sendingCode) {
                     this.sendingCode = true;
                     try {
-                        await this.sendCode(state ? 'M42 P8 S0' : 'M42 P8 S1');         //P8 has enable pin
-                        if (state == false) {           //if the state goes to false state disable the laser
+                        await this.sendCode(laserEnable ? 'M42 P8 S0' : 'M42 P8 S1');         //P8 has enable pin
+                        if (laserEnable == false) {           //if the state goes to false state disable the laser
                             this.laserEnable = false;
                         }
                    //     console.log("value at 3", this.sensors.gpIn[3].value)

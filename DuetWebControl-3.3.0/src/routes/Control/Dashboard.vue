@@ -28,9 +28,10 @@
 
 		<v-col class="hidden-xs-only" sm="4" md="4" lg="3" xl="3">
 			
-				<power-status class="mb-3"> </power-status>
+			<power-status class="mb-3"> </power-status>
+			<laser-ed-panel class="mb-3"> </laser-ed-panel>
 			
-		
+			
 			<macro-list class="mb-3"></macro-list>
 			
 		</v-col>
