@@ -95,7 +95,7 @@
 				<v-col>
 					<v-row no-gutters>
 						<v-col v-for="index in numMoveSteps" :key="-index"  :class="getMoveCellClass(index - 1)">
-							<code-btn :code="`M120\nG91\nG1 ${axis.letter}${-moveSteps(axis.letter)[index - 1]} F${moveFeedrate}\nG90\nM121`" no-wait @contextmenu.prevent="showMoveStepDialog(axis.letter, index - 1)" block tile class="move-btn">
+							<code-btn :code="`M120${axis.letter==='Z'? '\nM42 P9 S1' : ' ' }\nG91\nG1 ${axis.letter==='Z'?'H2':''} ${axis.letter}${-moveSteps(axis.letter)[index - 1]} F${moveFeedrate}\nG90  ${axis.letter==='Z'? '\nM42 P9 S0' : ' ' } \nM121`" no-wait @contextmenu.prevent="showMoveStepDialog(axis.letter, index - 1)" block tile class="move-btn">
 								<v-icon>mdi-chevron-left</v-icon> {{ axis.letter + showSign(-moveSteps(axis.letter)[index - 1]) }}
 							</code-btn>
 						</v-col>
@@ -106,7 +106,7 @@
 				<v-col>
 					<v-row no-gutters>
 						<v-col v-for="index in numMoveSteps" :key="index" :class="getMoveCellClass(numMoveSteps - index)">
-							<code-btn :code="`M120\nG91\nG1 ${axis.letter}${moveSteps(axis.letter)[numMoveSteps - index]} F${moveFeedrate}\nG90\nM121`" no-wait @contextmenu.prevent="showMoveStepDialog(axis.letter, numMoveSteps - index)" block tile class="move-btn">
+							<code-btn :code="`M120${axis.letter==='Z'? '\nM42 P9 S1' : ' ' }\nG91\nG1 ${axis.letter==='Z'?'H2':''} ${axis.letter}${moveSteps(axis.letter)[numMoveSteps - index]} F${moveFeedrate}\nG90  ${axis.letter==='Z'? '\nM42 P9 S0' : ' ' } \nM121`" no-wait @contextmenu.prevent="showMoveStepDialog(axis.letter, numMoveSteps - index)" block tile class="move-btn">
 								{{ axis.letter + showSign(moveSteps(axis.letter)[numMoveSteps - index]) }} <v-icon>mdi-chevron-right</v-icon>
 							</code-btn>
 						</v-col>
