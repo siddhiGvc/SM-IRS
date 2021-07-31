@@ -462,7 +462,8 @@ export default {
 			caption: 'Control',
 			dashboard: 'Dashboard',
 			console: 'Console',
-			laser: 'Laser'
+			laser: 'Laser',
+			rtfm:'Rtfm'
 		},
 		job: {
 			caption: 'Job',
@@ -679,7 +680,9 @@ export default {
 			off: 'OFF'
 		},
 	
-
+		rtfmpanel:{
+			caption:'RTFM'
+		},
 
 		powersupply: {
 			caption: 'System Power Supply',

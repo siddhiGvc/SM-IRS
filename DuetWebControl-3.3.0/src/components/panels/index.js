@@ -27,6 +27,7 @@ import SettingsNotificationsPanel from './SettingsNotificationsPanel.vue'
 import SettingsWebcamPanel from './SettingsWebcamPanel.vue'
 import SpeedFactorPanel from './SpeedFactorPanel.vue'
 import StatusPanel from './StatusPanel.vue'
+import RtfmPanel from './RtfmPanel.vue'
 import ToolsPanel from './ToolsPanel.vue'
 import TicklePulse from './TicklePulsePanel.vue'
 import WebcamPanel from './WebcamPanel.vue'
@@ -58,6 +59,7 @@ Vue.component('settings-notifications-panel', SettingsNotificationsPanel)
 Vue.component('settings-webcam-panel', SettingsWebcamPanel)
 Vue.component('status-panel', StatusPanel)
 Vue.component('speed-factor-panel', SpeedFactorPanel)
+Vue.component('rtfm-panel',RtfmPanel)
 Vue.component('tickle-panel', TicklePulse)
 Vue.component('tools-panel', ToolsPanel)
 Vue.component('webcam-panel', WebcamPanel)
