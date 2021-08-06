@@ -1,7 +1,13 @@
 <template>
   <div>
     <button @click="getvalues">load values</button>
-    <p>{{values}}</p>
+  <div v-for="value in values" :key="value.id">
+    <h4>Piston Pump       {{value.ppId}}</h4>
+    <h4>Material Name     {{value.ppMaterialName}}</h4>
+    <h4>PP Qty in MM      {{value.ppQty}}</h4>
+    <h4>Utime             {{value.ppUtime}}</h4>
+    <hr/>
+    </div>
   </div>
 </template>
 
@@ -25,7 +31,7 @@ export default {
 
       getvalues(){
         axios
-        .get("http://192.168.0.22/PP/values")
+        .get('/Raspberry/PistonPump')
         .then((response) => {
           console.log(response.data);
           this.values = response.data;
