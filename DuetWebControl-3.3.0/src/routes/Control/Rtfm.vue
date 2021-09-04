@@ -6,7 +6,7 @@
     <v-col>
      <rtfm-panel></rtfm-panel>
     </v-col>
-    <v-row> </v-row>
+    
   </v-card>
 </template>
 
@@ -17,9 +17,7 @@ import { registerRoute } from "..";
 
 export default {
  // components: { RtfmPanel },
-created() {
-        this.mounted();	
-    },
+  
   install() {
     // Register a route via Control -> laser
     registerRoute(this, {

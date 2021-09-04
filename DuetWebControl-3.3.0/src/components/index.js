@@ -8,4 +8,5 @@ import './lists'
 import './misc'
 import './panels'
 import './tabs'
+import './progressbar'
 
