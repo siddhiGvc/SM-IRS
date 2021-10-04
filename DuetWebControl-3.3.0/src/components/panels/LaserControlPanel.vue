@@ -95,7 +95,7 @@
                         this.pow = 255 * this.laserPower;                       //see spellCheck
                         this.pow = this.pow / 25;
                         // 25 is laser power
-                        await this.sendCode(state ? 'O52 S'+this.pow : 'O50');     //add for fire and off state will be full off
+                        await this.sendCode(state ? 'M1105 S'+this.pow : 'M1104');     //add for fire and off state will be full off
                     } catch (e) {
                         // handled before we get here
                     }

@@ -1,18 +1,8 @@
 <template>
   <v-row>
+   
     
-  <div>
-    <v-col>
-    <v-card  width="220px" height="320px">
-    <progress-bar :type= 'cylinder' :value= "75" />
-    <progress-bar-battery :value= "75" />
-    <progress-bar-line :value= "75" />
-    <progress-bar-cylinder  :value= "75" />
-    </v-card>
-    </v-col>
-  </div>
-  
-    <!--
+  <!--
   <table >
     <caption>PISTON PUMP</caption>
     <div v-for="value in values" :key="value.id">
@@ -66,8 +56,8 @@ export default {
   },
 
   created() {
-    this.fetchEventsList();
-    this.timer = setInterval(this.fetchEventsList, 1000);
+   // this.fetchEventsList();
+   // this.timer = setInterval(this.fetchEventsList, 1000);
   },
 
   components: {

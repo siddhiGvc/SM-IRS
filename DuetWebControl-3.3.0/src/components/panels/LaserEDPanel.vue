@@ -147,7 +147,7 @@
                 if (!this.sendingCode) {
                     this.sendingCode = true;
                     try {
-                        await this.sendCode(state ? 'O48'  : 'O49 ' );
+                        await this.sendCode(state ? 'M1101'  : 'M1102 ' );
                     } catch (e) {
                         // handled before we get here
                     }
