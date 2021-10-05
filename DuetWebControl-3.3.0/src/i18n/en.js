@@ -463,7 +463,7 @@ export default {
 			dashboard: 'Dashboard',
 			console: 'Console',
 			laser: 'Laser',
-			rtfm:'Rtfm'
+			movements:'Movement'
 		},
 		job: {
 			caption: 'Job',
@@ -601,6 +601,11 @@ export default {
 			toolFan: 'Tool Fan',
 			fan: 'Fan {0}',
 			noFans: 'No Fans'
+		},
+
+		irheater:{
+			caption:'IR Heater Control',
+			name: 'Number'
 		},
 
 		jobControl: {

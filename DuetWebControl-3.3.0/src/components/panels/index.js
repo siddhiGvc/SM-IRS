@@ -7,6 +7,7 @@ import ExtrudePanel from './ExtrudePanel.vue'
 import ExtrusionFactorsPanel from './ExtrusionFactorsPanel.vue'
 import FanPanel from './FanPanel.vue'
 import FansPanel from './FansPanel.vue'
+import IRHeaterPanel from './IRHeaterPanel.vue'
 import MovementPanel from './MovementPanel.vue'
 import JobControlPanel from './JobControlPanel.vue'
 import JobDataPanel from './JobDataPanel.vue'
@@ -27,7 +28,7 @@ import SettingsNotificationsPanel from './SettingsNotificationsPanel.vue'
 import SettingsWebcamPanel from './SettingsWebcamPanel.vue'
 import SpeedFactorPanel from './SpeedFactorPanel.vue'
 import StatusPanel from './StatusPanel.vue'
-import RtfmPanel from './RtfmPanel.vue'
+
 import ToolsPanel from './ToolsPanel.vue'
 import TicklePulse from './TicklePulsePanel.vue'
 import WebcamPanel from './WebcamPanel.vue'
@@ -39,6 +40,8 @@ Vue.component('extrude-panel', ExtrudePanel)
 Vue.component('extrusion-factors-panel', ExtrusionFactorsPanel)
 Vue.component('fan-panel', FanPanel)
 Vue.component('fans-panel', FansPanel)
+
+Vue.component('ir-heater-panel',IRHeaterPanel)// IR heater panel component added
 Vue.component('job-control-panel', JobControlPanel)
 Vue.component('job-data-panel', JobDataPanel)
 Vue.component('job-estimations-panel', JobEstimationsPanel)
@@ -59,7 +62,7 @@ Vue.component('settings-notifications-panel', SettingsNotificationsPanel)
 Vue.component('settings-webcam-panel', SettingsWebcamPanel)
 Vue.component('status-panel', StatusPanel)
 Vue.component('speed-factor-panel', SpeedFactorPanel)
-Vue.component('rtfm-panel',RtfmPanel)
+
 Vue.component('tickle-panel', TicklePulse)
 Vue.component('tools-panel', ToolsPanel)
 Vue.component('webcam-panel', WebcamPanel)
