@@ -14,7 +14,7 @@
                 <v-col>
                     <laser-control-panel v-show="laserControl" class="mb-2"> </laser-control-panel>
                 </v-col>
-        </v-row>
+            </v-row>
     </v-card>
 </template>
 

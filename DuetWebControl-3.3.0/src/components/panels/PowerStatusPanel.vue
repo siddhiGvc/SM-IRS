@@ -66,7 +66,7 @@
                                 <td class="text-left"> {{powerStatus[0]}} </td>
                                 <td class="text-left"> {{ gpIn[0] ? (gpIn[0].value ? $t('OFF') : $t('ON')) : $t('generic.noValue') }} </td>
                                 <td>
-                                    <v-btn-toggle :value="true" @change="togglePower" mandatory>
+                                    <v-btn-toggle color="primary" :value="true" @change="togglePower" mandatory>
                                         <v-btn text :value="true" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(true, 1)">
                                             {{ $t('ON') }}
                                         </v-btn>
@@ -98,7 +98,7 @@
                                 <td class="text-left"> {{ gpIn[2] ? (gpIn[2].value ? $t('ON') : $t('OFF')) : $t('generic.noValue') }} </td>
                                 <td>
                                     <!--gpIn[2].value-->
-                                    <v-btn-toggle :value="false" @change="togglePower" mandatory>
+                                    <v-btn-toggle color="primary" :value="false" @change="togglePower" mandatory>
                                         <v-btn text :value="true" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(true, 3)">
                                             {{ $t('ON') }}
                                         </v-btn>

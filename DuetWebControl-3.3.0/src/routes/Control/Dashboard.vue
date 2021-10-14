@@ -1,5 +1,5 @@
 <template>
-	<v-row>
+	<v-col>
 
 		<!---
 		<v-col xs="12" sm="8" md="8" lg="9" xl="9">
@@ -26,49 +26,47 @@
 			</v-row>
 		</v-col>
 		-->
-		<v-col class="hidden-xs-only" sm="4" md="4" lg="3" xl="3">
+
+		
+		<v-row  >
 			
-			<power-status class="mb-3"> </power-status>
-			<laser-ed-panel class="mb-3"> </laser-ed-panel>
-					
+			<v-col class="mb-2" sm="4" md="4" lg="3" xl="3">
+			<power-status > </power-status>
+			</v-col>
+			<!--
+			<v-col class="mb-2" sm="4" md="4" lg="3" xl="3">
+			<laser-ed-panel > </laser-ed-panel>
+			</v-col>
+			-->
+			<v-col class="mb-2" sm="4" md="4" lg="5" xl="5">
+			<ir-heater-panel > </ir-heater-panel>
+			</v-col>		
 		<!--	<macro-list class="mb-3"></macro-list> -->
 			
-		</v-col>
+		</v-row>
 
-
-		<v-col sm="6" md="6" lg="5" xl="5">	
-		<!--<v-col xs="12" sm="8" md="8" lg="9" xl="9">-->
-			<ir-heater-panel class="mb-3"> </ir-heater-panel>
-
-		</v-col>
 		
-
+	
 		<v-row>
-	<v-card class="flex-wrap">
-        <v-card-title class="pb-1">
-            <v-icon small class="mr-1">mdi-wrench</v-icon> {{ $t('panel.laserControles.caption') }}
-        </v-card-title>
-        <v-col>
-            <v-checkbox v-model="laserControl" label="Controls" color="primary" hide-details class="shrink mr-2 mt-0"> </v-checkbox>
-        </v-col>
-            <v-row>
-                <v-col>
+		
+                <v-col class="mb-2" sm="6" md="6" lg="5" xl="5">
                     <laser-dashboard class="mb-2"></laser-dashboard>
                 </v-col>
                 
-                <v-col>
-                    <laser-control-panel v-show="laserControl" class="mb-2"> </laser-control-panel>
+                <v-col class="mb-2" sm="4" md="4" lg="3" xl="3">
+					<laser-control-panel > </laser-control-panel>
                 </v-col>
-            </v-row>
-    </v-card>
-
-	</v-row>
-	
+           
+		</v-row>
 
 		
-				
-	</v-row>
+
 	
+
+	</v-col>
+
+	
+
 </template>
 
 <script>

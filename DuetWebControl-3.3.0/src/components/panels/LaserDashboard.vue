@@ -31,7 +31,7 @@
     <v-card>    <!-- -->
         <v-card-text class="px-0 pt-0 pb-2 content text-xs-center" v-show="visibleInputs || (visibleInputs.length + move.extruders.length)">
             <v-card-title class="py-2">
-                <v-icon small class="mr-1"> mdi-information </v-icon> {{ $t('panel.status.caption') }}
+                <v-icon small class="mr-1"> mdi-information </v-icon> {{ $t('panel.laserStatus.caption') }}
             </v-card-title>
             <!-- Sensors -->
             <v-col align-content="left" no-gutters class="flex-nowrap">

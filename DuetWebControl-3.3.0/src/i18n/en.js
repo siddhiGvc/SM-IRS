@@ -664,7 +664,7 @@ export default {
 		
 		laserControles: {
 			caption: 'Laser Module',
-			caption1: 'Control',
+			caption1: 'Laser System',
 			laserOn: 'ON',
 			laserEnable: 'Enable',
 			laserDisable: 'Disable',

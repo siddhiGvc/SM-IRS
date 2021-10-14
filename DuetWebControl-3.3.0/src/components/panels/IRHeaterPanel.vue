@@ -132,7 +132,7 @@
                             <!--    <td class="text-left"> {{ gpIn[2] ? (gpIn[2].value ? $t('ON') : $t('OFF')) : $t('generic.noValue') }} </td> -->
                                 <td>
                                     <!--gpIn[2].value-->
-                                    <v-btn-toggle :value="false" @change="togglePower" mandatory>
+                                    <v-btn-toggle color="primary" :value="false" @change="togglePower" mandatory>
                                         <v-btn text :value="true" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(true, 3)">
                                             {{ $t('ON') }}
                                         </v-btn>
@@ -164,7 +164,7 @@
                             <!--    <td class="text-left"> {{ gpIn[3] ? (gpIn[3].value ? $t('ON') : $t('OFF')) : $t('generic.noValue') }} </td> -->
                                 <td>
                                     <!--gpIn[2].value-->
-                                    <v-btn-toggle :value="false" @change="togglePower" mandatory>
+                                    <v-btn-toggle color="primary" :value="false" @change="togglePower" mandatory>
                                         <v-btn text :value="true" elevation="1" :disabled="uiFrozen" :loading="sendingCode" @click="togglePower(true, 4)">
                                             {{ $t('ON') }}
                                         </v-btn>
