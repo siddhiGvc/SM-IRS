@@ -30,7 +30,7 @@
 		
 		<v-row  >
 			
-			<v-col class="mb-2" sm="4" md="4" lg="3" xl="3">
+			<v-col class="my-2" sm="4" md="4" lg="3" xl="3">
 			<power-status > </power-status>
 			</v-col>
 			<!--
@@ -38,7 +38,7 @@
 			<laser-ed-panel > </laser-ed-panel>
 			</v-col>
 			-->
-			<v-col class="mb-2" sm="4" md="4" lg="5" xl="5">
+			<v-col class="my-2" sm="4" md="4" lg="5" xl="5">
 			<ir-heater-panel > </ir-heater-panel>
 			</v-col>		
 		<!--	<macro-list class="mb-3"></macro-list> -->
@@ -49,11 +49,11 @@
 	
 		<v-row>
 		
-                <v-col class="mb-2" sm="6" md="6" lg="5" xl="5">
+                <v-col class="my-2" sm="6" md="6" lg="5" xl="5">
                     <laser-dashboard class="mb-2"></laser-dashboard>
                 </v-col>
                 
-                <v-col class="mb-2" sm="4" md="4" lg="3" xl="3">
+                <v-col class="my-2" sm="4" md="4" lg="3" xl="3">
 					<laser-control-panel > </laser-control-panel>
                 </v-col>
            

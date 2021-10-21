@@ -78,7 +78,7 @@
         -->
     
         </v-col>
-        <v-col v-show="laserEnable">
+        <v-col >
            <v-text-field
             v-model="laserPower"
             :disabled="!laserEnable"
@@ -92,7 +92,7 @@
             <v-btn
               text
               :value="true"
-              :disabled="uiFrozen"
+              :disabled="!laserEnable"
               :loading="sendingCode"
               @click="togglePower(true)"
             >
@@ -101,7 +101,7 @@
             <v-btn
               text
               :value="false"
-              :disabled="uiFrozen"
+              :disabled="!laserEnable"
               :loading="sendingCode"
               @click="togglePower(false)"
             >
@@ -141,9 +141,9 @@ export default {
     ...mapActions("machine", ["sendCode"]),
     check: async function (laserEnable) {
       if (!this.sendingCode) {
-        // this.sendingCode = true;
+         this.sendingCode = true;
         try {
-          //  await this.sendCode(laserEnable ? 'M42 P8 S0' : 'M42 P8 S1');         //P8 has enable pin
+            await this.sendCode(laserEnable ? 'M1103' : 'M1103');         //P8 has enable pin
           if (laserEnable == false) {
             //if the state goes to false state disable the laser
             this.laserEnable = false;
